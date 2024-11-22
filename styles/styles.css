@@ -167,10 +167,19 @@ h3 {
     border-radius: 8px;
 }
 
-.container-fluid {
+.quienes-container {
     width: 100%;
     background-color: var(--color-secundario-2);
-    margin: 0;
+}
+
+.quienes-container h2{
+    color: var(--color-primario-1);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 @media (min-width: 768px) {
@@ -218,9 +227,26 @@ h3 {
         font-size: 2rem;
     }
 
-    /* .container{
-        max-width: 800px;
-    } */
+    .quienes-container {
+        padding: 4rem;
+    }
+
+    .quienes-container h2{
+        font-size: 3rem;
+        text-align: center;
+        /* padding: 0.8rem; */
+    }
+
+    .container{
+        margin: 1rem 3rem;
+        padding: 0.5rem;
+    }
+
+    .container p{
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-wrap: pretty;
+    }
 
 
 }
@@ -295,4 +321,27 @@ h3 {
         padding: 0.8rem 1.8rem;
         font-size: 1rem;
     }
+
+    .quienes-container {
+        padding: 1rem;
+    }
+
+    .quienes-container h2{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .container{
+        margin: 1rem 0;
+        /* padding: 1em; */
+    }
+
+    .container p{
+        font-size: 1rem;
+        font-weight: bold;
+        text-wrap: pretty;
+    }
+
+
+    
 }
