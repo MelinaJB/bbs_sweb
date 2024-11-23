@@ -137,7 +137,6 @@ p {
 }
 .portadatexto h1,
 h3 {
-    /* font-family: var(--fuente-titulos); */
     color: var(--color-texto-bloque);
     text-align: center;
 }
@@ -172,7 +171,7 @@ h3 {
     background-color: var(--color-secundario-2);
 }
 
-.quienes-container h2{
+h2{
     color: var(--color-primario-1);
 }
 
@@ -182,6 +181,33 @@ h3 {
     justify-content: center;
 }
 
+.card-container{
+    background-color: var(--color-secundario-2);
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card{
+    background-color: var(--color-primario-1);
+    padding: 2rem ;
+    border-radius: 8px;
+    max-width: 400px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    text-align: center;
+    color: var(--color-texto-bloque);
+    font-weight: bold;
+}
+
+
+
+/* ESCRITORIO */
 @media (min-width: 768px) {
     .portadatexto {
         position: absolute;
@@ -231,9 +257,10 @@ h3 {
         padding: 4rem;
     }
 
-    .quienes-container h2{
+    h2{
         font-size: 3rem;
         text-align: center;
+        margin-bottom: 2rem;
         /* padding: 0.8rem; */
     }
 
@@ -248,10 +275,33 @@ h3 {
         text-wrap: pretty;
     }
 
+    .hacemos-container h2{
+        padding-top: 2rem;
+    }
+
+    .card{
+        margin: 1rem 4rem;
+    }
+
+    .icon{
+        font-size: 4rem;
+        /* margin-bottom: 1rem; */
+    }
+
+    .card-title{
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        margin: 1rem 0;
+    }
+
+    .card-text{
+        font-size: 0.9rem;
+    }
+
 
 }
 
-/* Responsive */
+/* MOBILE */
 @media (max-width: 768px) {
     .logo img {
         max-width: 40px;
@@ -326,8 +376,8 @@ h3 {
         padding: 1rem;
     }
 
-    .quienes-container h2{
-        font-size: 2.5rem;
+    h2{
+        font-size: 2.1rem;
         text-align: center;
     }
 
@@ -341,6 +391,30 @@ h3 {
         font-weight: bold;
         text-wrap: pretty;
     }
+
+    .hacemos-container h2{
+        padding: 1rem;
+    }
+
+    .card{
+        margin: 0.8rem 0.6rem;
+        
+    }
+
+    .icon{
+        font-size: 4rem;
+        /* margin-bottom: 2rem; */
+    }
+
+    .card-title{
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .card-text{
+        font-size: 0.8rem;
+    }
+
 
 
     
