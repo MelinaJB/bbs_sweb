@@ -66,6 +66,7 @@
     --color-primario-3: #545454;
     --color-secundario-1: #a09f9f;
     --color-secundario-2: #ececec;
+    --color-secundario-3: #d9d9d9;
     /* Fuentes */
     --fuente-titulos: 'Montserrat',
     sans-serif;
@@ -203,7 +204,43 @@ h2{
     text-align: center;
     color: var(--color-texto-bloque);
     font-weight: bold;
+    box-shadow: 1px 5px 10px var(--color-secundario-1);
 }
+
+.como-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: 1rem; */
+    background-color: var(--color-secundario-2);
+    padding-top: 2rem;
+}
+
+
+.como-card{
+    display: block;
+    /* flex-direction: column;
+    justify-content: center; */
+    background-color: var(--color-secundario-3);
+    color: var(--color-texto-tarjetas);
+    border-radius: 8px;
+    box-shadow: 1px 5px 10px var(--color-secundario-1);
+    margin: 1rem;
+    padding: 2rem;
+    text-align: center;
+    font-weight: bold;
+    max-width: 800px;
+}
+
+.como-card:hover{
+    background-color: var(--color-primario-1);
+    color: var(--color-texto-bloque);
+    transition: ease 0.8s;
+
+
+}
+
 
 
 
@@ -298,6 +335,14 @@ h2{
         font-size: 0.9rem;
     }
 
+    .como-container{
+        padding-top: 2rem;
+    }
+
+    .como-title{
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
 
 }
 
@@ -413,6 +458,15 @@ h2{
 
     .card-text{
         font-size: 0.8rem;
+    }
+
+    .como-container{
+        padding-top: 1rem;
+    }
+
+    .como-title{
+        font-size: 1.5rem;
+        padding: 0.5rem;
     }
 
 
