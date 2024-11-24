@@ -237,8 +237,13 @@ h2{
     background-color: var(--color-primario-1);
     color: var(--color-texto-bloque);
     transition: ease 0.8s;
+}
 
-
+.ubicacion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;
+    padding: 1rem;
 }
 
 
@@ -344,6 +349,11 @@ h2{
         margin: 1rem 0;
     }
 
+    .ubicacion iframe{
+        width: 600px;
+        height: 400px;
+    }
+
 }
 
 /* MOBILE */
@@ -386,7 +396,8 @@ h2{
         flex-direction: column;
         width: 100%;
         padding: 1rem;
-        justify-content: center;
+        justify-items: center;
+        /* justify-content: center; */
     }
 
     .portadatexto h1 {
@@ -467,6 +478,11 @@ h2{
     .como-title{
         font-size: 1.5rem;
         padding: 0.5rem;
+    }
+
+    .ubicacion iframe{
+        max-width: 600px;
+        height: 400px;
     }
 
 
