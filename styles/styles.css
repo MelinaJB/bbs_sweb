@@ -171,11 +171,17 @@ h3 {
     position: fixed;
     bottom: 3rem;
     right: 1rem;
-    background-color: #ffffff;
 }
-.whatsapp i{
-    color: #008000;
-    height: auto;
+.whatsapp svg{
+    /* color: #008000; */
+    width: 4rem;
+    max-height: 5rem;
+}
+
+.whatsapp svg:hover{
+    transition: ease-in 0.5s;
+    width: 5rem;
+
 }
 
 .quienes-container {
@@ -185,6 +191,9 @@ h3 {
 
 h2{
     color: var(--color-primario-1);
+}
+a{
+    text-decoration: none;
 }
 
 .container{
@@ -223,7 +232,6 @@ h2{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin: 1rem; */
     background-color: var(--color-secundario-2);
     padding-top: 2rem;
 }
@@ -257,6 +265,60 @@ h2{
     padding: 1rem;
 }
 
+
+.pie{
+    width: 100%;
+    background-color: var(--color-secundario-2);
+    color: var(--color-texto-tarjetas);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+
+.pie2{
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0;
+}
+
+.pie a{
+    display: block;
+    padding: 0.5rem 0;
+    color: var(--color-texto-tarjetas);
+    font-family: "Merriweather", serif;
+    font-weight: bold;
+    font-size: small;
+}
+
+.pie a:hover{
+    color: var(--color-primario-1);
+}
+
+.pie a i{
+    font-size: 1rem;
+    margin-right: 0.3rem;
+}
+
+.pie .cv{
+    margin: 1rem 0;
+}
+
+.pie div ul li, .pie div p{
+    font-family: "Merriweather", serif;
+    font-weight: bold;
+    list-style: none;
+    font-size: small;
+}
+
+.especialistas{
+    margin: 1rem 1rem 1rem 0;
+}
 
 
 
@@ -424,7 +486,6 @@ h2{
         width: 100%;
         padding: 1rem;
         justify-items: center;
-        /* justify-content: center; */
     }
 
     .portadatexto h1 {
@@ -465,7 +526,7 @@ h2{
     }
 
     .container{
-        margin: 1rem 0;
+        margin: 1rem 1.5rem;
         /* padding: 1em; */
     }
 
@@ -510,6 +571,10 @@ h2{
     .ubicacion iframe{
         max-width: 600px;
         height: 400px;
+    }
+
+    .pie2{
+        justify-content: start;
     }
 
 }
