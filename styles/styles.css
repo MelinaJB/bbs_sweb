@@ -742,10 +742,21 @@ a {
         width: 100%;
 
     }
-
+/* 
     .calificaciones-card {
         flex: 0 0 calc(33.333% - 1rem);
+    } */
+
+    
+    .calificaciones-card {
+        flex: 0 0 100%; /* Cada tarjeta ocupa el 100% del ancho */
+        max-width: 100%; /* Evitar que sea más ancha que el contenedor */
     }
+
+    .carousel-track {
+        gap: 0; /* Quitar espacio entre tarjetas en móvil */
+    }
+
 
     .card-body h5{
         font-size: 1rem;
