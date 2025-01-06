@@ -69,9 +69,9 @@
     --color-secundario-3: #d9d9d9;
     /* Fuentes */
     --fuente-titulos: 'Montserrat',
-    sans-serif;
+        sans-serif;
     --fuente-texto: 'Merriweather',
-    serif;
+        serif;
 }
 
 
@@ -122,20 +122,21 @@ p {
     text-wrap: pretty;
 }
 
-.portadaimg{
+.portadaimg {
     width: 100%;
     height: 80vh;
     background-image: url(/img/fondoescritorio_transparencia.jpg);
-    background-size: cover; 
-    background-position: center; 
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
-.portadatexto div{
+.portadatexto div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .portadatexto h1,
 h3 {
     color: var(--color-texto-bloque);
@@ -167,18 +168,19 @@ h3 {
     border-radius: 8px;
 }
 
-.whatsapp{
+.whatsapp {
     position: fixed;
     bottom: 3rem;
     right: 1rem;
 }
-.whatsapp svg{
+
+.whatsapp svg {
     /* color: #008000; */
     width: 4rem;
     max-height: 5rem;
 }
 
-.whatsapp svg:hover{
+.whatsapp svg:hover {
     transition: ease-in 0.5s;
     width: 5rem;
 
@@ -189,20 +191,21 @@ h3 {
     background-color: var(--color-secundario-2);
 }
 
-h2{
+h2 {
     color: var(--color-primario-1);
 }
-a{
+
+a {
     text-decoration: none;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.card-container{
+.card-container {
     background-color: var(--color-secundario-2);
     width: 100%;
     padding: 2rem;
@@ -212,22 +215,22 @@ a{
     justify-content: space-evenly;
 }
 
-.card{
+.hacemos-card {
     background-color: var(--color-primario-1);
-    padding: 2rem ;
+    padding: 2rem;
     border-radius: 8px;
     max-width: 400px;
     max-height: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: center;  
+    justify-content: center;
     text-align: center;
     color: var(--color-texto-bloque);
     font-weight: bold;
     box-shadow: 1px 5px 10px var(--color-secundario-1);
 }
 
-.como-container{
+.como-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -237,7 +240,7 @@ a{
 }
 
 
-.como-card{
+.como-card {
     display: block;
     /* flex-direction: column;
     justify-content: center; */
@@ -252,21 +255,113 @@ a{
     max-width: 800px;
 }
 
-.como-card:hover{
+.como-card:hover {
     background-color: var(--color-primario-1);
     color: var(--color-texto-bloque);
     transition: ease 0.8s;
 }
 
-.ubicacion{
+.calificaciones {
     display: flex;
+    flex-direction: column; /* Asegura que los elementos estén en columnas */
+    align-items: center; /* Centra horizontalmente los elementos */
+    margin: 2rem 0; /* Espaciado superior e inferior */
+  }
+
+  .titulo-calificaciones {
+    text-align: center;
+    margin-bottom: 1.5rem; /* Espaciado entre el título y el carrusel */
+  }
+  
+  .titulo-calificaciones h4 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+
+/* Contenedor del carrusel */
+.carousel-container {
+    position: relative;
+    width: 80%; /* Ajusta el ancho del carrusel */
+    max-width: 1200px; /* Ancho máximo para pantallas grandes */
+    margin: 0 auto;
+  }
+.carousel {
+    overflow: hidden;
+    /*flex: 1;  Ocupa todo el espacio restante */
+  }
+
+.carousel-track{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 1rem;
+    
+}
+
+.carousel-track a{
+    color: var(--color-texto-tarjetas);
+}
+
+.calificaciones-card {
+    flex: 0 0 calc(33.33% - 1rem); /* 3 tarjetas por fila */
+    max-width: 100%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-body {
+    padding: 15px;
+}
+.calificaciones-card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+.calificaciones-card-text {
+    font-size: 0.9rem;
+    color: #555;
+    text-wrap: pretty;
+    display: -webkit-box;  /*Establece un contenedor flexible */
+    -webkit-box-orient: vertical; /* Define la orientación del contenedor */
+    -webkit-line-clamp: 5;
+    line-clamp: 3; /* Número de líneas visibles */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel-button.prev {
+    left: 1rem;
+}
+.carousel-button.next {
+    right: 1rem;
+}
+
+.ubicacion {
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-self: center;
+    justify-content: center;
     padding: 1rem;
 }
 
 
-.pie{
+.pie {
     width: 100%;
     background-color: var(--color-secundario-2);
     color: var(--color-texto-tarjetas);
@@ -278,7 +373,7 @@ a{
 }
 
 
-.pie2{
+.pie2 {
     width: 60vw;
     display: flex;
     flex-direction: row;
@@ -287,7 +382,7 @@ a{
     margin: 0;
 }
 
-.pie a{
+.pie a {
     display: block;
     padding: 0.5rem 0;
     color: var(--color-texto-tarjetas);
@@ -296,27 +391,28 @@ a{
     font-size: small;
 }
 
-.pie a:hover{
+.pie a:hover {
     color: var(--color-primario-1);
 }
 
-.pie a i{
+.pie a i {
     font-size: 1rem;
     margin-right: 0.3rem;
 }
 
-.pie .cv{
+.pie .cv {
     margin: 1rem 0;
 }
 
-.pie div ul li, .pie div p{
+.pie div ul li,
+.pie div p {
     font-family: "Merriweather", serif;
     font-weight: bold;
     list-style: none;
     font-size: small;
 }
 
-.especialistas{
+.especialistas {
     margin: 1rem 1rem 1rem 0;
 }
 
@@ -361,11 +457,11 @@ a{
         font-size: 1.8rem;
     }
 
-    .whatsapp{
+    .whatsapp {
         right: 3rem;
     }
 
-    .whatsapp i{
+    .whatsapp i {
         font-size: 5rem;
     }
 
@@ -380,59 +476,122 @@ a{
         padding: 4rem;
     }
 
-    h2{
+    h2 {
         font-size: 3rem;
         text-align: center;
         margin-bottom: 2rem;
         /* padding: 0.8rem; */
     }
 
-    .container{
+    .container {
         margin: 1rem 3rem;
         padding: 0.5rem;
     }
 
-    .container p{
+    .container p {
         font-size: 1.5rem;
         font-weight: bold;
         text-wrap: pretty;
     }
 
-    .hacemos-container h2{
+    .hacemos-container h2 {
         padding-top: 2rem;
     }
 
-    .card{
+    .hacemos-card {
         margin: 1rem 4rem;
     }
 
-    .icon{
+    .icon {
         font-size: 4rem;
         /* margin-bottom: 1rem; */
     }
 
-    .card-title{
+    .hacemos-card-title {
         font-size: 1.5rem;
         padding: 0.5rem;
         margin: 1rem 0;
     }
 
-    .card-text{
+    .card-text {
         font-size: 0.9rem;
     }
 
-    .como-container{
+    .como-container {
         padding-top: 2rem;
     }
 
-    .como-title{
+    .como-title {
         font-size: 1.5rem;
         margin: 1rem 0;
     }
 
-    .ubicacion iframe{
+    .titulo-calificaciones h4 {
+        font-size: 2.8rem;
+        margin: 2.5rem;
+    }
+
+    .titulo-calificaciones i {
+        font-size: 2.5rem;
+    }
+
+    .calificaciones-card {
+        width: calc(100%/3);
+        height: 200px;
+
+    }
+
+    .calificaciones-card-title {
+        font-size: 1rem;
+
+    }
+
+    .icon-5stars {
+        font-size: 1rem;
+        margin: 0.5rem 0 0.5rem;
+    }
+
+    /*.calificaciones-card-text {
+        text-wrap: pretty;
+        display: -webkit-box;  Establece un contenedor flexible 
+        -webkit-box-orient: vertical; /* Define la orientación del contenedor 
+        -webkit-line-clamp: 5;
+        line-clamp: 3; /* Número de líneas visibles 
+        overflow: hidden; /* Oculta el contenido que se desborda 
+    }*/
+
+    .carousel {
+        max-width: 75%;
+        margin: 2rem auto;
+    }
+
+    .calificaciones-card {
+        flex: 0 0 calc(33.33% - 1rem); /* 3 tarjetas por fila */
+        max-width: 100%;
+
+    }
+
+ 
+        
+
+    .ubicacion iframe {
         width: 600px;
         height: 400px;
+    }
+
+    .ubicacion div {
+        margin-left: 1rem;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .ubicacion div h4 {
+        margin-bottom: 1rem;
+    }
+
+    .ubicacion div iframe {
+        width: 300px;
+        height: 350px;
     }
 
 }
@@ -465,15 +624,15 @@ a{
         display: block;
     }
 
-    .whatsapp{
+    .whatsapp {
         right: 1.5rem;
     }
 
-    .whatsapp i{
+    .whatsapp i {
         font-size: 5rem;
     }
 
-    .portadaimg{
+    .portadaimg {
         height: 70vh;
     }
 
@@ -520,60 +679,91 @@ a{
         padding: 1rem;
     }
 
-    h2{
+    h2 {
         font-size: 2.1rem;
         text-align: center;
     }
 
-    .container{
+    .container {
         margin: 1rem 1.5rem;
         /* padding: 1em; */
     }
 
-    .container p{
+    .container p {
         font-size: 1rem;
         font-weight: bold;
         text-wrap: pretty;
     }
 
-    .hacemos-container h2{
+    .hacemos-container h2 {
         padding: 1rem;
     }
 
-    .card{
+    .hacemos-card {
         margin: 0.8rem 0.6rem;
-        
+
     }
 
-    .icon{
+    .icon {
         font-size: 4rem;
         /* margin-bottom: 2rem; */
     }
 
-    .card-title{
+    .hacemos-card-title {
         font-size: 1rem;
         padding: 0.5rem;
     }
 
-    .card-text{
+    .card-text {
         font-size: 0.8rem;
     }
 
-    .como-container{
+    .como-container {
         padding-top: 1rem;
     }
 
-    .como-title{
+    .como-title {
         font-size: 1.5rem;
         padding: 0.5rem;
     }
 
-    .ubicacion iframe{
-        max-width: 600px;
-        height: 400px;
+    .titulo-calificaciones h4 {
+        font-size: 2rem;
+        text-wrap: pretty;
+        margin: 0.8rem;
     }
 
-    .pie2{
+    .titulo-calificaciones i {
+        font-size: 2rem;
+    }
+
+    
+    .carousel {
+        width: 100%;
+
+    }
+
+    .calificaciones-card {
+        flex: 0 0 calc(33.333% - 1rem);
+    }
+
+    .card-body h5{
+        font-size: 1rem;
+    }
+
+    .ubicacion iframe {
+        max-width: 600px;
+        height: 300px;
+    }
+
+    .ubicacion div {
+        margin: 1rem 0;
+        font-size: 1.2rem;
+        text-align: center;
+
+    }
+
+    .pie2 {
         justify-content: start;
     }
 
