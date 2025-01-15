@@ -23,36 +23,43 @@ a{
 }
 
 .carousel{
-    background-color: black;
+    
     padding: 1rem;
     z-index: 10;
     /* overflow: hidden; */
 }
-
+/* 
 .carousel-track{
     display: flex;
     flex-direction: row;
-    background-color: red;
-    transition: transform 0.5s ease-in-out;
-    will-change: transform;
+    animation: slide 15s linear infinite;
     gap: 1rem;
-}
+} */
+
+/* @keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+} */
 
 .carousel-item{
     background-color: aqua;
     height: 12.5rem;
     padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-item h5{
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     text-wrap: nowrap;
     overflow: hidden;
 }
 
 .icon-5stars{
     margin: 0.8rem 0 0.8rem 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .calificaciones-card-text {
@@ -61,13 +68,13 @@ a{
     text-wrap: pretty;
     display: -webkit-box;  /*Establece un contenedor flexible */
     -webkit-box-orient: vertical; /* Define la orientación del contenedor */
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 4;
     line-clamp: 3; /* Número de líneas visibles */
     overflow: hidden; /* Oculta el contenido que se desborda */
 
 }
 
-/* Botones de navegación */
+/* Botones de navegación
 .carousel-button {
     position: absolute;
     top: 50%;
@@ -86,7 +93,7 @@ a{
 
 .carousel-button.next {
     right: 0;
-}
+} */
 
 
 /* ESCRITORIO */
@@ -97,15 +104,27 @@ a{
 
     }
 
+    .carousel-track{
+        display: flex;
+        flex-direction: row;
+        animation: slide 15s linear infinite;
+        gap: 1rem;
+    }
+
+    @keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
 
     .carousel-container{
         width: 80vw;
-        
+
         overflow: hidden;
     }
 
     .carousel-item{
-        min-width: 25.2vw;
+        min-width: 20vw;
         /* margin: 0 0.1% 0 0.1%; */
     }
     
@@ -121,8 +140,21 @@ a{
         width: 90vw;
     }
 
+    .carousel-track{
+        display: flex;
+        flex-direction: row;
+        animation: slide 8s linear infinite;
+        gap: 1rem;
+    }
+
+    @keyframes slide {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+    }
+    
+
     .carousel-item{
-        min-width: 100%;
+        min-width: 90%;
         margin: auto;
     }
 

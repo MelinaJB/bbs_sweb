@@ -263,93 +263,86 @@ a {
 
 .calificaciones {
     display: flex;
-    flex-direction: column; /* Asegura que los elementos estén en columnas */
-    align-items: center; /* Centra horizontalmente los elementos */
-    margin: 2rem 0; /* Espaciado superior e inferior */
-  }
+    flex-direction: column;
+    /* Asegura que los elementos estén en columnas */
+    align-items: center;
+    /* Centra horizontalmente los elementos */
+    margin: 2rem 0;
+    /* Espaciado superior e inferior */
+}
 
-  .titulo-calificaciones {
+.titulo-calificaciones {
     text-align: center;
-    margin-bottom: 1.5rem; /* Espaciado entre el título y el carrusel */
-  }
-  
-  .titulo-calificaciones h4 {
+    margin-bottom: 1.5rem;
+    /* Espaciado entre el título y el carrusel */
+}
+
+.titulo-calificaciones h4 {
     font-size: 1.8rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
-  }
+}
 
+/* 
+ACAA EMPIEZA LO NUEVO */
+.calificaciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-/* Contenedor del carrusel */
+}
+
 .carousel-container {
     position: relative;
-    width: 80%; /* Ajusta el ancho del carrusel */
-    max-width: 1200px; /* Ancho máximo para pantallas grandes */
-    margin: 0 auto;
-  }
+    overflow: hidden;
+
+}
+
 .carousel {
-    overflow: hidden;
-    /*flex: 1;  Ocupa todo el espacio restante */
-  }
 
-.carousel-track{
-    display: flex;
-    overflow: hidden;
-    transition: transform 0.5s ease-in-out;
-    /* gap: 1rem; */
+    padding: 1rem;
+    z-index: 10;
+    /* overflow: hidden; */
 }
 
-.carousel-track a{
-    color: var(--color-texto-tarjetas);
-}
-
-.calificaciones-card {
-    flex: 0 0 calc(33.33% - 1rem); /* 3 tarjetas por fila */
-    max-width: 100%;
+.carousel-item {
+    height: 12.5rem;
+    padding: 1rem;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.card-body {
-    padding: 15px;
+
+.carousel-item a{
+    color: var(--color-texto-tarjetas);
 }
-.calificaciones-card-title {
-    font-size: 1.25rem;
-    margin-bottom: 10px;
+
+.carousel-item h5 {
+    font-size: 1rem;
+    text-wrap: nowrap;
+    overflow: hidden;
 }
+
+.icon-5stars {
+    margin: 0.8rem 0 0.8rem 0;
+    font-size: 1rem;
+}
+
 .calificaciones-card-text {
     font-size: 0.9rem;
     color: #555;
     text-wrap: pretty;
-    display: -webkit-box;  /*Establece un contenedor flexible */
-    -webkit-box-orient: vertical; /* Define la orientación del contenedor */
+    display: -webkit-box;
+    /*Establece un contenedor flexible */
+    -webkit-box-orient: vertical;
+    /* Define la orientación del contenedor */
     -webkit-line-clamp: 5;
-    line-clamp: 3; /* Número de líneas visibles */
-    overflow: hidden; /* Oculta el contenido que se desborda */
-}
+    line-clamp: 3;
+    /* Número de líneas visibles */
+    overflow: hidden;
+    /* Oculta el contenido que se desborda */
 
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 20;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.carousel-button.prev {
-    left: 1rem;
-}
-.carousel-button.next {
-    right: 1rem;
 }
 
 .ubicacion {
@@ -535,40 +528,49 @@ a {
         font-size: 2.5rem;
     }
 
-    .calificaciones-card {
-        width: calc(100%/3);
-        height: 200px;
 
-    }
-
-    .calificaciones-card-title {
-        font-size: 1rem;
-
-    }
-
-    .icon-5stars {
-        font-size: 1rem;
-        margin: 0.5rem 0 0.5rem;
-    }
-
+    /* aca empieza lo nuevo */
 
     .carousel {
-        max-width: 75%;
-        margin: 2rem auto;
+        max-height: 14.5rem;
+
     }
 
-    .carousel-track{
+    .carousel-track {
+        display: flex;
+        flex-direction: row;
+        animation: slideDesktop 20s linear infinite;
         gap: 1rem;
     }
 
-    .calificaciones-card {
-        flex: 0 0 calc(33.33% - 1rem); /* 3 tarjetas por fila */
-        max-width: 100%;
+    @keyframes slideDesktop {
+        0% {
+            transform: translateX(0);
+        }
 
+        100% {
+            transform: translateX(-148%);
+        }
     }
 
- 
-        
+
+    .carousel-container {
+        width: 80vw;
+        overflow: hidden;
+    }
+
+    .carousel-item {
+        min-width: 20vw;
+        /* margin: 0 0.1% 0 0.1%; */
+    }
+
+    /* .carousel-item h5 {
+        font-size: 1rem;
+        text-wrap: nowrap;
+        overflow: hidden;
+    } */
+
+
     .ubicacion iframe {
         width: 600px;
         height: 400px;
@@ -732,25 +734,36 @@ a {
         font-size: 2rem;
     }
 
-    
-    .carousel {
-        width: 100%;
+    /* aca empieza lo nuevo */
+
+    .carousel-container {
+        width: 90vw;
+    }
+
+    .carousel-track {
+        display: flex;
+        flex-direction: row;
+        animation: slideMobile 25s linear infinite;
+        gap: 1rem;
+    }
+
+    @keyframes slideMobile {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-790%);
+        }
+    }
+
+
+    .carousel-item {
+        min-width: 90%;
         margin: auto;
     }
 
-    /* .carousel-track{
-        gap: 0;
-    } */
 
-    .calificaciones-card {
-        /* flex: 0 0 calc(33.333% - 1rem); */
-        flex: 0 0 100%;
-    
-    }
-
-    .card-body h5{
-        font-size: 1rem;
-    }
 
     .ubicacion iframe {
         max-width: 600px;

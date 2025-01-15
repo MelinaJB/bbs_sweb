@@ -27,7 +27,7 @@
         <div class="calificaciones">
 
             <div class="carousel-container">
-                <button class="carousel-button prev" aria-label="Previous">&#8249;</button>
+        
                 <div class="carousel">
                     <div class="carousel-track">
                         <!-- 1 -->
@@ -213,7 +213,7 @@
                     </div>
 
                 </div>
-                <button class="carousel-button next" aria-label="Next">&#8250;</button>
+              
             </div>
 
         </div>
@@ -224,47 +224,47 @@
     </main>
 
     <script>
-        const track = document.querySelector('.carousel-track');
-        const prevButton = document.querySelector('.carousel-button.prev');
-        const nextButton = document.querySelector('.carousel-button.next');
-        const items = Array.from(track.children);
+        // const track = document.querySelector('.carousel-track');
+        // const prevButton = document.querySelector('.carousel-button.prev');
+        // const nextButton = document.querySelector('.carousel-button.next');
+        // const items = Array.from(track.children);
 
-        let currentIndex = 0;
-        const itemsPerPage = window.innerWidth >= 768 ? 3 : 1; // 3 en desktop, 1 en mobile
+        // let currentIndex = 0;
+        // const itemsPerPage = window.innerWidth >= 768 ? 3 : 1; // 3 en desktop, 1 en mobile
 
-        // Configuración inicial
-        const updateCarousel = () => {
-            const itemWidth = items[0].getBoundingClientRect().width;
-            const totalWidth = itemWidth * items.length;
+        // // Configuración inicial
+        // const updateCarousel = () => {
+        //     const itemWidth = items[0].getBoundingClientRect().width;
+        //     const totalWidth = itemWidth * items.length;
 
-            // Ajustar ancho del track
-            track.style.width = `${totalWidth}px`;
+        //     // Ajustar ancho del track
+        //     track.style.width = `${totalWidth}px`;
 
-            // Calcular la posición y mover el carrusel
-            const offset = currentIndex * itemWidth * itemsPerPage;
-            track.style.transform = `translateX(-${offset}px)`;
-        };
+        //     // Calcular la posición y mover el carrusel
+        //     const offset = currentIndex * itemWidth * itemsPerPage;
+        //     track.style.transform = `translateX(-${offset}px)`;
+        // };
 
-        // Mover hacia atrás
-        prevButton.addEventListener('click', () => {
-            const totalItems = items.length;
-            currentIndex = (currentIndex - 1 + Math.ceil(totalItems / itemsPerPage)) % Math.ceil(totalItems / itemsPerPage);
-            updateCarousel();
-        });
+        // // Mover hacia atrás
+        // prevButton.addEventListener('click', () => {
+        //     const totalItems = items.length;
+        //     currentIndex = (currentIndex - 1 + Math.ceil(totalItems / itemsPerPage)) % Math.ceil(totalItems / itemsPerPage);
+        //     updateCarousel();
+        // });
 
-        // Mover hacia adelante
-        nextButton.addEventListener('click', () => {
-            const totalItems = items.length;
-            currentIndex = (currentIndex + 1) % Math.ceil(totalItems / itemsPerPage);
-            updateCarousel();
-        });
+        // // Mover hacia adelante
+        // nextButton.addEventListener('click', () => {
+        //     const totalItems = items.length;
+        //     currentIndex = (currentIndex + 1) % Math.ceil(totalItems / itemsPerPage);
+        //     updateCarousel();
+        // });
 
-        // Ajustar el carrusel al cargar la página o cambiar el tamaño de la ventana
-        window.addEventListener('resize', () => {
-            currentIndex = 0; // Reiniciar índice
-            updateCarousel();
-        });
-        updateCarousel();
+        // // Ajustar el carrusel al cargar la página o cambiar el tamaño de la ventana
+        // window.addEventListener('resize', () => {
+        //     currentIndex = 0; // Reiniciar índice
+        //     updateCarousel();
+        // });
+        // updateCarousel();
 
 
     </script>
