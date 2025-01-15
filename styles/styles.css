@@ -452,6 +452,7 @@ ACAA EMPIEZA LO NUEVO */
 
     .whatsapp {
         right: 3rem;
+        z-index: 200;
     }
 
     .whatsapp i {
