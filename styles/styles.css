@@ -294,9 +294,9 @@ a {
 
 .carousel-track{
     display: flex;
+    overflow: hidden;
     transition: transform 0.5s ease-in-out;
-    gap: 1rem;
-    
+    /* gap: 1rem; */
 }
 
 .carousel-track a{
@@ -551,18 +551,14 @@ a {
         margin: 0.5rem 0 0.5rem;
     }
 
-    /*.calificaciones-card-text {
-        text-wrap: pretty;
-        display: -webkit-box;  Establece un contenedor flexible 
-        -webkit-box-orient: vertical; /* Define la orientación del contenedor 
-        -webkit-line-clamp: 5;
-        line-clamp: 3; /* Número de líneas visibles 
-        overflow: hidden; /* Oculta el contenido que se desborda 
-    }*/
 
     .carousel {
         max-width: 75%;
         margin: 2rem auto;
+    }
+
+    .carousel-track{
+        gap: 1rem;
     }
 
     .calificaciones-card {
@@ -573,7 +569,6 @@ a {
 
  
         
-
     .ubicacion iframe {
         width: 600px;
         height: 400px;
@@ -740,11 +735,17 @@ a {
     
     .carousel {
         width: 100%;
-
+        margin: auto;
     }
 
+    /* .carousel-track{
+        gap: 0;
+    } */
+
     .calificaciones-card {
-        flex: 0 0 calc(33.333% - 1rem);
+        /* flex: 0 0 calc(33.333% - 1rem); */
+        flex: 0 0 100%;
+    
     }
 
     .card-body h5{

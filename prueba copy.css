@@ -1,0 +1,134 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+.calificaciones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.carousel-container{
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.carousel{
+    background-color: black;
+    padding: 1rem;
+    z-index: 10;
+    /* overflow: hidden; */
+}
+
+.carousel-track{
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+    gap: 1rem;
+}
+
+.carousel-item{
+    background-color: aqua;
+    height: 12.5rem;
+    padding: 1rem;
+}
+
+.carousel-item h5{
+    font-size: 1.3rem;
+    text-wrap: nowrap;
+    overflow: hidden;
+}
+
+.icon-5stars{
+    margin: 0.8rem 0 0.8rem 0;
+    font-size: 1.2rem;
+}
+
+.calificaciones-card-text {
+    font-size: 0.9rem;
+    color: #555;
+    text-wrap: pretty;
+    display: -webkit-box;  /*Establece un contenedor flexible */
+    -webkit-box-orient: vertical; /* Define la orientación del contenedor */
+    -webkit-line-clamp: 5;
+    line-clamp: 3; /* Número de líneas visibles */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+
+}
+
+/* Botones de navegación */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-button.prev {
+    left: 0;
+}
+
+.carousel-button.next {
+    right: 0;
+}
+
+
+/* ESCRITORIO */
+@media (min-width: 768px) {
+
+    .carousel{
+        max-height: 14.5rem;
+
+    }
+
+
+    .carousel-container{
+        width: 80vw;
+        
+        overflow: hidden;
+    }
+
+    .carousel-item{
+        min-width: 25.2vw;
+        /* margin: 0 0.1% 0 0.1%; */
+    }
+    
+    
+
+
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    
+    .carousel-container{
+        width: 90vw;
+    }
+
+    .carousel-item{
+        min-width: 100%;
+        margin: auto;
+    }
+
+    
+
+   
+    
+
+}
