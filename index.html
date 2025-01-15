@@ -490,44 +490,6 @@
             navLinks.classList.toggle('active');
         });
 
-        // //Carousel
-        // const track = document.querySelector('.carousel-track');
-        // const cards = document.querySelectorAll('.calificaciones-card');
-        // const totalCards = cards.length;
-        
-        // // Duplicar las primeras y últimas tarjetas para efecto infinito
-        // const firstClone = track.firstElementChild.cloneNode(true);
-        // const lastClone = track.lastElementChild.cloneNode(true);
-        // track.appendChild(firstClone);
-        // track.insertBefore(lastClone, track.firstElementChild);
-        // let currentSlide = 1; // Comienza en la tarjeta 1
-        // const cardWidth = cards[0].offsetWidth + 16; // Ancho de la tarjeta + margen
-        // track.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
-        
-        // // Configurar desplazamiento automático
-        // const autoScroll = () => {
-        //     currentSlide++;
-        //     track.style.transition = 'transform 0.5s ease-in-out';
-        //     track.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
-        //     // Reiniciar al final
-        //     if (currentSlide >= totalCards + 1) {
-        //         setTimeout(() => {
-        //             track.style.transition = 'none';
-        //             currentSlide = 1;
-        //             track.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
-        //         }, 500);
-        //     }
-        // };
-        
-        // // Inicia el carrusel automático
-        // let autoSlideInterval = setInterval(autoScroll, 3000); // Cambia cada 3 segundos
-        
-        // // Pausar en escritorio si se interactúa
-        // const pauseOnHover = () => clearInterval(autoSlideInterval);
-        // const resumeOnHover = () => (autoSlideInterval = setInterval(autoScroll, 3000));
-        // track.addEventListener('mouseover', pauseOnHover);
-        // track.addEventListener('mouseout', resumeOnHover);
-
     </script>
 
 
