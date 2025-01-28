@@ -191,6 +191,10 @@ h3 {
     background-color: var(--color-secundario-2);
 }
 
+.quienes-container p{
+    text-align: center;
+}
+
 h2 {
     color: var(--color-primario-1);
 }
