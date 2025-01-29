@@ -125,7 +125,7 @@ p {
 .portadaimg {
     width: 100%;
     height: 80vh;
-    background-image: url(/img/fondoescritorio_transparencia.jpg);
+    background-image: url(/img/portada.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
